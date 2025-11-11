@@ -13,7 +13,7 @@ class Specular < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/felixgeelhaar/specular/releases/download/v1.4.0/specular_1.4.0_darwin_amd64.tar.gz"
-      sha256 "310c241b8dc260bdb21063d7543513d0f030b3f42efd30e179ed353645b08ad6"
+      sha256 "6f89d1c100384064a97adaae0fec78757273b456c51124b6d140b89a2654ba0a"
 
       def install
         bin.install "specular"
@@ -26,7 +26,7 @@ class Specular < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/specular/releases/download/v1.4.0/specular_1.4.0_darwin_arm64.tar.gz"
-      sha256 "e8eadf6162dbf5d373009d816f90c9a1755b4d7135894bccc06085a677165d57"
+      sha256 "fd82d057bc0414f65b5423a207b9fdb6b50c8acaea6779934eccb594e2243e83"
 
       def install
         bin.install "specular"
@@ -42,7 +42,7 @@ class Specular < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/felixgeelhaar/specular/releases/download/v1.4.0/specular_1.4.0_linux_amd64.tar.gz"
-      sha256 "bb4e6213a919268adc64f86ae47d5c239ae204e1fcbbc256ed9d5596f658e96a"
+      sha256 "f3a39c407a3febd59536422b7d1a971f853a57d09f2f5481c4978f93e90d2f4b"
 
       def install
         bin.install "specular"
@@ -55,7 +55,7 @@ class Specular < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/felixgeelhaar/specular/releases/download/v1.4.0/specular_1.4.0_linux_arm64.tar.gz"
-      sha256 "ed7e3932d901f956524a63b620c6487c835db65b6addbfdbf9e7f263b89db3de"
+      sha256 "8152440972350fe0ef18e8f82e91ad6ff9a290f08d1be35b357a7aa356d0542a"
 
       def install
         bin.install "specular"
