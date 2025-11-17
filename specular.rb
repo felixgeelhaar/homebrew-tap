@@ -5,15 +5,15 @@
 class Specular < Formula
   desc "AI-Native Spec and Build Assistant with policy enforcement"
   homepage "https://github.com/felixgeelhaar/specular"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   depends_on "docker" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/specular/releases/download/v1.1.0/specular_1.1.0_darwin_amd64.tar.gz"
-      sha256 "3c37e9b9794ddd33a8c8386832a9e3c7f2e20a8be4c9c5276b7b2dbab942be40"
+      url "https://github.com/felixgeelhaar/specular/releases/download/v1.2.0/specular_1.2.0_darwin_amd64.tar.gz"
+      sha256 "2419cf6a110ba8aadf692cde36fec0f7a4d087fbac87085cf777c5eb0d44553f"
 
       def install
         bin.install "specular"
@@ -25,8 +25,8 @@ class Specular < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/specular/releases/download/v1.1.0/specular_1.1.0_darwin_arm64.tar.gz"
-      sha256 "856083ccd19c0391ac75f736b33de92c921062f2f099dab8d9aa1458fee27ccb"
+      url "https://github.com/felixgeelhaar/specular/releases/download/v1.2.0/specular_1.2.0_darwin_arm64.tar.gz"
+      sha256 "9345ed7ad7dcbece20633de62f6e6e9e4670a8c171961b38ae3401db02123b58"
 
       def install
         bin.install "specular"
@@ -41,8 +41,8 @@ class Specular < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/specular/releases/download/v1.1.0/specular_1.1.0_linux_amd64.tar.gz"
-      sha256 "bd3b87f89ca5820290771ebe3029ed992a8c091efef1ac5d1e07671b3b291512"
+      url "https://github.com/felixgeelhaar/specular/releases/download/v1.2.0/specular_1.2.0_linux_amd64.tar.gz"
+      sha256 "9cf5189d601997196eafcac437e11cb7ff780e9fe54ed12ffd2199f31be1e433"
       def install
         bin.install "specular"
 
@@ -53,8 +53,8 @@ class Specular < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/specular/releases/download/v1.1.0/specular_1.1.0_linux_arm64.tar.gz"
-      sha256 "fe356eace5dc1c5c461662475c0760922afe193dd6e619659482c3e6c08dfc53"
+      url "https://github.com/felixgeelhaar/specular/releases/download/v1.2.0/specular_1.2.0_linux_arm64.tar.gz"
+      sha256 "e6451dc2c58cb384af8796af784971d1ce181fd97b28f26abb50fcaa2f37bde8"
       def install
         bin.install "specular"
 
