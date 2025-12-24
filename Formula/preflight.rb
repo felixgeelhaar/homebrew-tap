@@ -3,7 +3,7 @@
 class Preflight < Formula
   desc "Deterministic workstation compiler"
   homepage "https://github.com/felixgeelhaar/preflight"
-  version "2.2.0"
+  version "2.3.0"
   license "MIT"
 
   on_macos do
