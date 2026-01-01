@@ -16,7 +16,7 @@ class Verdictsec < Formula
       -s -w
       -X main.version=#{version}
     ]
-    system "go", "build", *std_go_args(ldflags:), "./cmd/verdict"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"verdict"), "./cmd/verdict"
   end
 
   def caveats
