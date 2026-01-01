@@ -1,6 +1,6 @@
-# Homebrew Tap for Specular
+# felixgeelhaar/tap
 
-Official Homebrew tap for [Specular](https://github.com/felixgeelhaar/specular) - AI-native development framework with specification-driven workflows.
+Homebrew tap for my development tools.
 
 ## Installation
 
@@ -8,46 +8,28 @@ Official Homebrew tap for [Specular](https://github.com/felixgeelhaar/specular) 
 # Add the tap
 brew tap felixgeelhaar/tap
 
-# Install specular
-brew install specular
+# Install a formula
+brew install <formula>
 ```
 
 ## Available Formulas
 
-- **specular** - AI-native development framework with spec-first, policy-enforced software development
+| Formula | Description | Version |
+|---------|-------------|---------|
+| [preflight](https://github.com/felixgeelhaar/preflight) | Deterministic workstation compiler | `brew install preflight` |
+| [specular](https://github.com/felixgeelhaar/specular) | AI-native spec and build assistant | `brew install specular` |
+| [verdictsec](https://github.com/felixgeelhaar/verdictsec) | Security assessment CLI for Go projects | `brew install verdictsec` |
 
-## Usage
-
-After installation, you can use Specular directly:
-
-```bash
-# Check version
-specular version
-
-# See all commands
-specular --help
-
-# Start an interactive interview
-specular interview --preset api-service --list
-
-# Generate spec from PRD
-specular spec generate --in PRD.md --out .specular/spec.yaml
-```
-
-## Updates
-
-The formula is automatically updated when new releases are published via GoReleaser.
+## Updating
 
 ```bash
-# Update tap
-brew update
+# Update tap and upgrade all formulas
+brew update && brew upgrade
 
-# Upgrade specular
-brew upgrade specular
+# Upgrade a specific formula
+brew upgrade preflight
 ```
 
 ## Support
 
-- [Documentation](https://github.com/felixgeelhaar/specular/blob/main/README.md)
-- [Issues](https://github.com/felixgeelhaar/specular/issues)
-- [Releases](https://github.com/felixgeelhaar/specular/releases)
+For issues with specific tools, please file issues in their respective repositories.
