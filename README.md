@@ -14,8 +14,9 @@ brew install <formula>
 
 ## Available Formulas
 
-| Formula | Description | Version |
+| Formula | Description | Install |
 |---------|-------------|---------|
+| [coverctl](https://github.com/felixgeelhaar/coverctl) | Domain-aware coverage enforcement for Go | `brew install coverctl` |
 | [preflight](https://github.com/felixgeelhaar/preflight) | Deterministic workstation compiler | `brew install preflight` |
 | [specular](https://github.com/felixgeelhaar/specular) | AI-native spec and build assistant | `brew install specular` |
 | [verdictsec](https://github.com/felixgeelhaar/verdictsec) | Security assessment CLI for Go projects | `brew install verdictsec` |
