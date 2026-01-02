@@ -4,8 +4,8 @@
 class Verdictsec < Formula
   desc "Comprehensive security assessment CLI tool for Go projects"
   homepage "https://github.com/felixgeelhaar/verdictsec"
-  url "https://github.com/felixgeelhaar/verdictsec/archive/refs/tags/v0.5.3.tar.gz"
-  sha256 "0dbf5f79f8cf02c84b863d07fdce3ba9cf4bbfb7de570d45e69714dbac1a30c0"
+  url "https://github.com/felixgeelhaar/verdictsec/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "3585f6d4602cba295ba6935d5ad9d20c3762e975e396cf4346e75fe8eed6b36f"
   license "Apache-2.0"
   head "https://github.com/felixgeelhaar/verdictsec.git", branch: "main"
 
