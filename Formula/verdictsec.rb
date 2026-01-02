@@ -15,6 +15,8 @@ class Verdictsec < Formula
     ldflags = %W[
       -s -w
       -X main.version=#{version}
+      -X main.commit=#{tap.user}
+      -X main.buildDate=#{time.iso8601}
     ]
     system "go", "build", *std_go_args(ldflags:, output: bin/"verdict"), "./cmd/verdict"
   end
