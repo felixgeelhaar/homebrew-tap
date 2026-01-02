@@ -3,26 +3,26 @@
 class Preflight < Formula
   desc "Deterministic workstation compiler"
   homepage "https://github.com/felixgeelhaar/preflight"
-  version "4.6.2"
+  version "4.6.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/preflight/releases/download/v#{version}/preflight-darwin-arm64.tar.gz"
-      sha256 "542f295c64149a6ae26c10c6ffc78c1460ca6ac3cf661bb211e5946b35b24f36"
+      sha256 "a3e7a75fa6ceb6fcde9d945308276514e3f9ba9c961a3e65f98eaaa4bcd67627"
     else
       url "https://github.com/felixgeelhaar/preflight/releases/download/v#{version}/preflight-darwin-amd64.tar.gz"
-      sha256 "939c909ffde0307195f38007ce4453e8b206995184e4e101d3582bec5386dbcd"
+      sha256 "ab5f988617bd31f053c2a264dd47bba55d1929c42375ab15a88e3b7ee13a6141"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/preflight/releases/download/v#{version}/preflight-linux-arm64.tar.gz"
-      sha256 "e7280fd5466f15ffcb40df21008df755b0ad1822ee9d734d6d4e73e36d45b0b5"
+      sha256 "2ac8f1e532481a5341f16eedd45bc383e5ae4fc5a2499e15ddf41bf632769795"
     else
       url "https://github.com/felixgeelhaar/preflight/releases/download/v#{version}/preflight-linux-amd64.tar.gz"
-      sha256 "98acbcd006c85ead2ee763236b57db2b5310dd316259cfe30b44064698b47e58"
+      sha256 "0af3f61a445e1d432f24ecdc783d6b4566a1832e98891d9375a9cbb281a9ffd7"
     end
   end
 
