@@ -3,13 +3,13 @@
 class Temper < Formula
   desc "Adaptive AI pairing tool for learning through deliberate practice"
   homepage "https://github.com/felixgeelhaar/temper"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/temper/releases/download/v#{version}/temper-darwin-arm64.tar.gz"
-      sha256 "PLACEHOLDER_DARWIN_ARM64"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "temper-darwin-arm64" => "temper"
@@ -17,7 +17,7 @@ class Temper < Formula
       end
     else
       url "https://github.com/felixgeelhaar/temper/releases/download/v#{version}/temper-darwin-amd64.tar.gz"
-      sha256 "PLACEHOLDER_DARWIN_AMD64"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "temper-darwin-amd64" => "temper"
@@ -29,7 +29,7 @@ class Temper < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/temper/releases/download/v#{version}/temper-linux-arm64.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_ARM64"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "temper-linux-arm64" => "temper"
@@ -37,7 +37,7 @@ class Temper < Formula
       end
     else
       url "https://github.com/felixgeelhaar/temper/releases/download/v#{version}/temper-linux-amd64.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_AMD64"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "temper-linux-amd64" => "temper"
