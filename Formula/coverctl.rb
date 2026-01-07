@@ -3,20 +3,20 @@
 class Coverctl < Formula
   desc "Declarative, domain-aware coverage enforcement for Go teams"
   homepage "https://github.com/felixgeelhaar/coverctl"
-  version "1.9.1"
+  version "1.10.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/coverctl/releases/download/v#{version}/coverctl-darwin-arm64.tar.gz"
-      sha256 "0b9ba3cc25716468b629261d08c78f01a0c60d296f32c4e6cd962a0b45020da3"
+      sha256 "c15f7d34bebd0e594804e664f8c8ce7b0721d981522c0451c5b512c02d6a1848"
 
       def install
         bin.install "coverctl-darwin-arm64" => "coverctl"
       end
     else
       url "https://github.com/felixgeelhaar/coverctl/releases/download/v#{version}/coverctl-darwin-amd64.tar.gz"
-      sha256 "3734ca2077196a7192eec60ac9c47a54ed790e75fa3aa14d1f3e873678ccfa81"
+      sha256 "d081d1bc6b0761f4ee16ffcedceaf45d7c6554c6b56639d760a65993f9c2aa38"
 
       def install
         bin.install "coverctl-darwin-amd64" => "coverctl"
@@ -27,14 +27,14 @@ class Coverctl < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/coverctl/releases/download/v#{version}/coverctl-linux-arm64.tar.gz"
-      sha256 "d48af57eb8aac630677cb5689d616fd3a6a3b51690895bc251f14f8e82c4bc8b"
+      sha256 "7fce2dcd8e03317c76c0955121b98f5eb4ee2973d8d2739260bbef1b3eb2230f"
 
       def install
         bin.install "coverctl-linux-arm64" => "coverctl"
       end
     else
       url "https://github.com/felixgeelhaar/coverctl/releases/download/v#{version}/coverctl-linux-amd64.tar.gz"
-      sha256 "4596316a890185bef50fb52e13aed2e3fb63e0b1f3fb01a734c60aa02e383470"
+      sha256 "c9262fbea2d0f8bcbd1bc1f12833fdb2ccd8befa602e4141f0f9e681d094c006"
 
       def install
         bin.install "coverctl-linux-amd64" => "coverctl"
