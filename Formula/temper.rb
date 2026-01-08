@@ -3,7 +3,7 @@
 class Temper < Formula
   desc "Adaptive AI pairing tool for learning through deliberate practice"
   homepage "https://github.com/felixgeelhaar/temper"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
