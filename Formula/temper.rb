@@ -9,7 +9,7 @@ class Temper < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/temper/releases/download/v#{version}/temper-darwin-arm64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "06bee20fb6519cb08f16d0c5b269d409600a5c54018514a3a355b4b46955d307"
 
       def install
         bin.install "temper-darwin-arm64" => "temper"
@@ -17,7 +17,7 @@ class Temper < Formula
       end
     else
       url "https://github.com/felixgeelhaar/temper/releases/download/v#{version}/temper-darwin-amd64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "eaedc348d37603c29bce30bd0874a9dcafcdd9c49c88489738da4bbc42f6de7f"
 
       def install
         bin.install "temper-darwin-amd64" => "temper"
@@ -29,7 +29,7 @@ class Temper < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/temper/releases/download/v#{version}/temper-linux-arm64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "d8067193a595f24082ef0b071c5d6bbeea58be81fece7b03a694f69eaa3b9f96"
 
       def install
         bin.install "temper-linux-arm64" => "temper"
@@ -37,7 +37,7 @@ class Temper < Formula
       end
     else
       url "https://github.com/felixgeelhaar/temper/releases/download/v#{version}/temper-linux-amd64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "de31351c5ac4478cd967d26844b1af226089aa67cc0c2f8adda56a5894f545d7"
 
       def install
         bin.install "temper-linux-amd64" => "temper"
