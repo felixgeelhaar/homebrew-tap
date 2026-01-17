@@ -5,23 +5,23 @@
 class Verdict < Formula
   desc "Go security assessment CLI - SAST, vulnerabilities, secrets, SBOM"
   homepage "https://github.com/felixgeelhaar/verdictsec"
-  version "0.11.3"
+  version "0.13.2"
   license "Apache-2.0"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/verdictsec/releases/download/v0.11.3/verdict_0.11.3_darwin_amd64.tar.gz"
-      sha256 "b0c00cd7b2fa5cf94cb1117bbc0f62731cd5d25cab3f924b6d30fec9cc195a5e"
+      url "https://github.com/felixgeelhaar/verdictsec/releases/download/v0.13.2/verdict_0.13.2_darwin_amd64.tar.gz"
+      sha256 "0c21834eb288131afd8417e0f828096c15156cb253b6f0e9ae5d006091bb77b9"
 
       def install
         bin.install "verdict"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/verdictsec/releases/download/v0.11.3/verdict_0.11.3_darwin_arm64.tar.gz"
-      sha256 "03047c81dada304bf0071866637cc88d6cf892b00f92df40e61cae7267da4e87"
+      url "https://github.com/felixgeelhaar/verdictsec/releases/download/v0.13.2/verdict_0.13.2_darwin_arm64.tar.gz"
+      sha256 "070f054b1136b398709b546163ed07b001d8fc14ca6ad7108c50accf71a59184"
 
       def install
         bin.install "verdict"
@@ -31,15 +31,15 @@ class Verdict < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/verdictsec/releases/download/v0.11.3/verdict_0.11.3_linux_amd64.tar.gz"
-      sha256 "320c5f7553f50c2636ecdb4e08d8923d2061374c9b78cf8dca2a7faf7dc98a9e"
+      url "https://github.com/felixgeelhaar/verdictsec/releases/download/v0.13.2/verdict_0.13.2_linux_amd64.tar.gz"
+      sha256 "75ae41e5982ffb894f7f4b96a75f1ae69da49c8e60fb50fb6b247d2d819375c6"
       def install
         bin.install "verdict"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/verdictsec/releases/download/v0.11.3/verdict_0.11.3_linux_arm64.tar.gz"
-      sha256 "ae5d30b5de9148fbbfbdfc3a38e95d3882054beff17d600db13466b0a15f3e60"
+      url "https://github.com/felixgeelhaar/verdictsec/releases/download/v0.13.2/verdict_0.13.2_linux_arm64.tar.gz"
+      sha256 "d3ee67440bc01b20731142c4089f10185a962a3b4be0956ea49dcae3528ca3b3"
       def install
         bin.install "verdict"
       end
