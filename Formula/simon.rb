@@ -5,20 +5,20 @@
 class Simon < Formula
   desc "AI Agent Governance Runtime - Deterministic control plane for AI agents."
   homepage "https://github.com/felixgeelhaar/simon"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/simon/releases/download/v0.1.1/simon_Darwin_x86_64.tar.gz"
-      sha256 "7a09ac1c38370856dd1bc9bdbba55c1e34983d7460ad6c053af2f820bcce5924"
+      url "https://github.com/felixgeelhaar/simon/releases/download/v0.2.0/simon_Darwin_x86_64.tar.gz"
+      sha256 "db3f02b6e4c2093b1b5098de67ee33b89bbdb7b7fcff89aeda71f0ab1328d4b0"
 
       def install
         bin.install "simon"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/simon/releases/download/v0.1.1/simon_Darwin_arm64.tar.gz"
-      sha256 "ea7faa346b730ffc8f32cd305960d90cbd4d5b29d07e69e8ad60af242bbce1cc"
+      url "https://github.com/felixgeelhaar/simon/releases/download/v0.2.0/simon_Darwin_arm64.tar.gz"
+      sha256 "f1254a02caf59fec11d47e60c28b0f329f76009ae90da40784ea4e00bc163a59"
 
       def install
         bin.install "simon"
@@ -28,15 +28,15 @@ class Simon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/simon/releases/download/v0.1.1/simon_Linux_x86_64.tar.gz"
-      sha256 "c384ff8b620268cdecc8a8e12e9f29ef95d3e4322ffcdf9eae68a42a0915ccc0"
+      url "https://github.com/felixgeelhaar/simon/releases/download/v0.2.0/simon_Linux_x86_64.tar.gz"
+      sha256 "e6826cd4394cbeaf9403d81bb38de5e6dc579efe801c9501c990cf134aa57518"
       def install
         bin.install "simon"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/simon/releases/download/v0.1.1/simon_Linux_arm64.tar.gz"
-      sha256 "8a3703c7b3c40fb718c73520b0ebd518f2e7268244306e0e2d7974ae406d3d78"
+      url "https://github.com/felixgeelhaar/simon/releases/download/v0.2.0/simon_Linux_arm64.tar.gz"
+      sha256 "a09bdb92b27226dd11617729d07e8a8d28c95647526f80036a3a6e5f69f96551"
       def install
         bin.install "simon"
       end
