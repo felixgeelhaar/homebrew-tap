@@ -5,24 +5,42 @@
 class GranolaMcp < Formula
   desc "Go CLI and MCP server for Granola meeting intelligence"
   homepage "https://github.com/felixgeelhaar/granola-mcp"
-  version "1.0.3"
+  version "1.1.0"
   license "MIT"
-  depends_on :macos
 
-  if Hardware::CPU.intel?
-    url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.0.3/granola-mcp_1.0.3_darwin_amd64.tar.gz"
-    sha256 "f3b55c1408d128562c410e607ffee43df6f42599e85215ed3f7cd581f18708dd"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.1.0/granola-mcp_1.1.0_darwin_amd64.tar.gz"
+      sha256 "3608cdac1a1e15239a16769ae60b77ab8cc338e194e4f8ad8b4f995810ab37d0"
 
-    def install
-      bin.install "granola-mcp"
+      def install
+        bin.install "granola-mcp"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.1.0/granola-mcp_1.1.0_darwin_arm64.tar.gz"
+      sha256 "67d18bdbaa6af72121502ab79470e5ec85d7c1cfb408c948765f8ef9049124d2"
+
+      def install
+        bin.install "granola-mcp"
+      end
     end
   end
-  if Hardware::CPU.arm?
-    url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.0.3/granola-mcp_1.0.3_darwin_arm64.tar.gz"
-    sha256 "ca75405d12be08108a6eab55beb03d79694924775305bb5ee745898620b0105c"
 
-    def install
-      bin.install "granola-mcp"
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.1.0/granola-mcp_1.1.0_linux_amd64.tar.gz"
+      sha256 "46b52723ec8f6e012cdcfe0080b2f7d7a5bb5ace81239771beb29f87359be8c4"
+      def install
+        bin.install "granola-mcp"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.1.0/granola-mcp_1.1.0_linux_arm64.tar.gz"
+      sha256 "fb427cf4f4075bafb903991fda05f28121448d2f9e50fdc8b03e73809bcdfb9c"
+      def install
+        bin.install "granola-mcp"
+      end
     end
   end
 end
