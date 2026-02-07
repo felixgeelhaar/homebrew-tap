@@ -5,21 +5,21 @@
 class GranolaMcp < Formula
   desc "Go CLI and MCP server for Granola meeting intelligence"
   homepage "https://github.com/felixgeelhaar/granola-mcp"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.0.2/granola-mcp_1.0.2_darwin_amd64.tar.gz"
-    sha256 "1909fce370a1b54d2a363e28d647c56df9e61c0583b128874c1811aa27a62360"
+    url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.0.3/granola-mcp_1.0.3_darwin_amd64.tar.gz"
+    sha256 "f3b55c1408d128562c410e607ffee43df6f42599e85215ed3f7cd581f18708dd"
 
     def install
       bin.install "granola-mcp"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.0.2/granola-mcp_1.0.2_darwin_arm64.tar.gz"
-    sha256 "b0d044bbdf770cb8c14fdcf56edb6c66e65d76feb10535551da5e422f11f67c7"
+    url "https://github.com/felixgeelhaar/granola-mcp/releases/download/v1.0.3/granola-mcp_1.0.3_darwin_arm64.tar.gz"
+    sha256 "ca75405d12be08108a6eab55beb03d79694924775305bb5ee745898620b0105c"
 
     def install
       bin.install "granola-mcp"
