@@ -11,7 +11,7 @@ class Acai < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/felixgeelhaar/acai/releases/download/v2.1.0/acai_2.1.0_darwin_amd64.tar.gz"
-      sha256 "a3a61dbe4b3cf988f1edd34d73a187dc0ac2e537312bf46fb48185e4c21449d4"
+      sha256 "81917f1d32b4c653f6c47109534c9c9da1082818cba266f8087997b4999ee24f"
 
       def install
         bin.install "acai"
@@ -19,7 +19,7 @@ class Acai < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/acai/releases/download/v2.1.0/acai_2.1.0_darwin_arm64.tar.gz"
-      sha256 "076d71ea9e198093bb83a06f4eb19660dcc60294fe40f934fea6ce7b49bce15c"
+      sha256 "86e4fd21e575cb7b24293c924a35b3842529e9a96324a640311b9b6163c3f96d"
 
       def install
         bin.install "acai"
@@ -30,14 +30,14 @@ class Acai < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/felixgeelhaar/acai/releases/download/v2.1.0/acai_2.1.0_linux_amd64.tar.gz"
-      sha256 "20b551a17658481f7b5182a8ae0f0f4cef00ebc1584396f6735f5431a57b3bec"
+      sha256 "47fd4e896cdd97cff714beaf4b3016a890da6150c8e35b871cbee8247d5f0923"
       def install
         bin.install "acai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/felixgeelhaar/acai/releases/download/v2.1.0/acai_2.1.0_linux_arm64.tar.gz"
-      sha256 "65cd262f8bacc2e62a7ee8fb0a00ee61cde0dde95bdf32829b4ff05b7332c133"
+      sha256 "930e0951d261e492f2d5cd1d585902c2c87fe418e6d6a64697548c93c63e789d"
       def install
         bin.install "acai"
       end
