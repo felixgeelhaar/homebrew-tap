@@ -5,21 +5,21 @@
 class Acai < Formula
   desc "Go CLI and MCP server for Granola meeting intelligence"
   homepage "https://github.com/felixgeelhaar/acai"
-  version "2.2.0"
+  version "2.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/acai/releases/download/v2.2.0/acai_2.2.0_darwin_amd64.tar.gz"
-      sha256 "ccb822e297336da237e00d2c6fd18aba2b28ad2596fecc05563409050eab7aaf"
+      url "https://github.com/felixgeelhaar/acai/releases/download/v2.2.1/acai_2.2.1_darwin_amd64.tar.gz"
+      sha256 "1098e88593e5aafae6b2b739cdbc10119bc537345407a84f2f054db9d4fb4ba2"
 
       def install
         bin.install "acai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/acai/releases/download/v2.2.0/acai_2.2.0_darwin_arm64.tar.gz"
-      sha256 "fa1e29e9ee1366dc879d2a4f824b4926e816b01b5ce499433f6ad82a39686b2e"
+      url "https://github.com/felixgeelhaar/acai/releases/download/v2.2.1/acai_2.2.1_darwin_arm64.tar.gz"
+      sha256 "4db1b3ddeaa8b8d42a415490ea0f046829e7ae3866e9a563a9f1a827d562890d"
 
       def install
         bin.install "acai"
@@ -29,15 +29,15 @@ class Acai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/acai/releases/download/v2.2.0/acai_2.2.0_linux_amd64.tar.gz"
-      sha256 "27b70b5284c96c4873269ba5e008b81379edc2f649d10203bc15ad1f27ddedeb"
+      url "https://github.com/felixgeelhaar/acai/releases/download/v2.2.1/acai_2.2.1_linux_amd64.tar.gz"
+      sha256 "be43ae43b6a6ae04de92884fae09ee4bd010b1a143cf7765f9bf7e1cf76bc93e"
       def install
         bin.install "acai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/acai/releases/download/v2.2.0/acai_2.2.0_linux_arm64.tar.gz"
-      sha256 "1ab396f66700eb86d549325709196d7363de1ea8f9fe392bc056104fe28ecc2b"
+      url "https://github.com/felixgeelhaar/acai/releases/download/v2.2.1/acai_2.2.1_linux_arm64.tar.gz"
+      sha256 "6e3dad14538cfa990ea1ba879c6fe20fb90d23bda2aaa1af85f87989a3aacd4f"
       def install
         bin.install "acai"
       end
