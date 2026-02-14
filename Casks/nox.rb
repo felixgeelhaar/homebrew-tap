@@ -3,7 +3,7 @@ cask "nox" do
   name "nox"
   desc "Language-agnostic security scanner with first-class AI application security"
   homepage "https://github.com/nox-hq/nox"
-  version "0.2.0"
+  version "0.2.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "nox" do
   on_macos do
     on_intel do
       url "https://github.com/nox-hq/nox/releases/download/v#{version}/nox_#{version}_darwin_amd64.tar.gz"
-      sha256 "9ea208ab52e6d86940a83346d9334f90381963e87c6bf1ebde53a5836af236b8"
+      sha256 "8c0bf4530c9904e861dfb624e5562f2569f6d46236c25e6841d44c0193aef96f"
     end
     on_arm do
       url "https://github.com/nox-hq/nox/releases/download/v#{version}/nox_#{version}_darwin_arm64.tar.gz"
-      sha256 "5c6d05c71c323e224b31b78c6d43390fa54d5fbb3b872e6a426ac1474aaab56f"
+      sha256 "bc6efb202499f7ffe633fc472b5a0ab533e6a32e5a85307a8383b63c637c8c87"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/nox-hq/nox/releases/download/v#{version}/nox_#{version}_linux_amd64.tar.gz"
-      sha256 "e7f6b83259e60fc13bc7fa9c70c84db3b49ba8b2897409b8e253de76946c8ee7"
+      sha256 "e2c26e641d7c32304866e6840154aa9a4e61517d97270eb5895d566634bac180"
     end
     on_arm do
       url "https://github.com/nox-hq/nox/releases/download/v#{version}/nox_#{version}_linux_arm64.tar.gz"
-      sha256 "2d06ae86ac2a43dd6f2868feb97e7d2675f18976d0bffa9475ef0dffdd63f16f"
+      sha256 "b14227886e1231e3c3fc10db2a85a8559c7276f2c2a9388bedb90cdef2965e38"
     end
   end
 
