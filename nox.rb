@@ -5,21 +5,21 @@
 class Nox < Formula
   desc "Language-agnostic security scanner with first-class AI application security"
   homepage "https://github.com/nox-hq/nox"
-  version "0.4.2"
+  version "0.4.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nox-hq/nox/releases/download/v0.4.2/nox_0.4.2_darwin_amd64.tar.gz"
-      sha256 "f191c15120ef2df10330797b328a071f2d6722843bd18cc36c1514f1159d1b94"
+      url "https://github.com/nox-hq/nox/releases/download/v0.4.3/nox_0.4.3_darwin_amd64.tar.gz"
+      sha256 "833f481f7c210ee5f2c5b707b353283608a7f35ddb3c9fed0ebd5f2253adbcbc"
 
       def install
         bin.install "nox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nox-hq/nox/releases/download/v0.4.2/nox_0.4.2_darwin_arm64.tar.gz"
-      sha256 "b46066642a6d37b34281f5db846904b7646b47da33512d70b8b0360dadbcdf8f"
+      url "https://github.com/nox-hq/nox/releases/download/v0.4.3/nox_0.4.3_darwin_arm64.tar.gz"
+      sha256 "e0b3ecfa8f6a876ab78d33c32c93ce828a6794edb99b5c4333a4a902925c390a"
 
       def install
         bin.install "nox"
@@ -29,15 +29,15 @@ class Nox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nox-hq/nox/releases/download/v0.4.2/nox_0.4.2_linux_amd64.tar.gz"
-      sha256 "b18482b91a3fc98b21dfae2ca39e7abc330cdeaedc0fff730b402e37501ddc08"
+      url "https://github.com/nox-hq/nox/releases/download/v0.4.3/nox_0.4.3_linux_amd64.tar.gz"
+      sha256 "fe7e6af8c2ef67eb54b182741cacbd4e2c13b526c62d81acd5702d217bbcefc0"
       def install
         bin.install "nox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nox-hq/nox/releases/download/v0.4.2/nox_0.4.2_linux_arm64.tar.gz"
-      sha256 "57fe0bc73f70f00818d18cee32d36adc4d20e7d3950537dd0951b1a2b8cd1dd6"
+      url "https://github.com/nox-hq/nox/releases/download/v0.4.3/nox_0.4.3_linux_arm64.tar.gz"
+      sha256 "2f390c828fef3dfebdd9578a94f5195675c64fa526a88ec838999fea65d19ba6"
       def install
         bin.install "nox"
       end
