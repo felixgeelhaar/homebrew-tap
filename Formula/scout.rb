@@ -5,21 +5,21 @@
 class Scout < Formula
   desc "MCP server for AI-powered browser automation"
   homepage "https://github.com/felixgeelhaar/scout"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/scout/releases/download/v0.2.0/scout_0.2.0_darwin_amd64.tar.gz"
-      sha256 "3f6610a2d6cdc10140e05e10092080564982411dab78ea873339a406b63cb893"
+      url "https://github.com/felixgeelhaar/scout/releases/download/v0.3.0/scout_0.3.0_darwin_amd64.tar.gz"
+      sha256 "4d5dc8471467afda3204f428cfbd46ffda24bf697f240f3c20548381bd66fd2a"
 
       define_method(:install) do
         bin.install "scout"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/scout/releases/download/v0.2.0/scout_0.2.0_darwin_arm64.tar.gz"
-      sha256 "e276d04bc1b9424deae2f40c56c6d58c199179ddf88ca7646bc9430f650d1b26"
+      url "https://github.com/felixgeelhaar/scout/releases/download/v0.3.0/scout_0.3.0_darwin_arm64.tar.gz"
+      sha256 "001db1d2c565cb9c5c62354f8c7a9a90286073c91fa4e72bc4595505a8b59ded"
 
       define_method(:install) do
         bin.install "scout"
@@ -29,15 +29,15 @@ class Scout < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/scout/releases/download/v0.2.0/scout_0.2.0_linux_amd64.tar.gz"
-      sha256 "04a08c13aea37f3044d37bfaa9c09e7616991c7bf051c4c14aece354a8f8a606"
+      url "https://github.com/felixgeelhaar/scout/releases/download/v0.3.0/scout_0.3.0_linux_amd64.tar.gz"
+      sha256 "ab62305483e59f690de70d643614f7e2bc987f5da1c8d6e75d8ca49c3e2acf9e"
       define_method(:install) do
         bin.install "scout"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/scout/releases/download/v0.2.0/scout_0.2.0_linux_arm64.tar.gz"
-      sha256 "0ca99d10c2abb33260cebb98c77a034ad388d2ceb0aa8bfccf98f9652b55fd89"
+      url "https://github.com/felixgeelhaar/scout/releases/download/v0.3.0/scout_0.3.0_linux_arm64.tar.gz"
+      sha256 "a862a1caba6827363aebf0e46c950dfa3cc2fe9018edf6dd9ffd2f871e50ae05"
       define_method(:install) do
         bin.install "scout"
       end
