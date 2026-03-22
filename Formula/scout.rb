@@ -11,7 +11,7 @@ class Scout < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/felixgeelhaar/scout/releases/download/v1.2.0/scout_1.2.0_darwin_amd64.tar.gz"
-      sha256 "2e6bb86633b196d8141476e990fa1bbd2ca6766f834a06b9df9f04bd57639bf6"
+      sha256 "4d82d5ed9e9fbeb207bfcd46bcf6175e3cf0c7b654ab475d0287cc6adc44067e"
 
       define_method(:install) do
         bin.install "scout"
@@ -19,7 +19,7 @@ class Scout < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/scout/releases/download/v1.2.0/scout_1.2.0_darwin_arm64.tar.gz"
-      sha256 "31b4f14163d721a42199723acbf84031e0e7056d2d15aed119eeb3df30c6083d"
+      sha256 "c3e1c03a63523fcd6f7e46ebbcd76c991e9a12f2552af0d113bc6d93d602ad7f"
 
       define_method(:install) do
         bin.install "scout"
@@ -30,14 +30,14 @@ class Scout < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/felixgeelhaar/scout/releases/download/v1.2.0/scout_1.2.0_linux_amd64.tar.gz"
-      sha256 "5efeb66c96dc82d356fe2ea1ff15a3b11e578ecd7f4f89e7f5e83114c2bec8e3"
+      sha256 "a377c19b4fab5a059b40bf02a1b60a19e4da94aef432f23691f3cf90f93a40bc"
       define_method(:install) do
         bin.install "scout"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/felixgeelhaar/scout/releases/download/v1.2.0/scout_1.2.0_linux_arm64.tar.gz"
-      sha256 "02fcd3e866e20357024c845e459b2b2a971ae2ae306aa5138b37fb99fa4db4a3"
+      sha256 "bf718545c7703e406b39f92c23ded3f89a19a2c13eae7fafb73dfc9b57c4bcd5"
       define_method(:install) do
         bin.install "scout"
       end
