@@ -1,22 +1,22 @@
 # Homebrew formula for Coverctl
 # To install: brew tap felixgeelhaar/tap && brew install coverctl
 class Coverctl < Formula
-  desc "Declarative, domain-aware coverage enforcement for Go teams"
+  desc "Declarative, domain-aware coverage enforcement for any language"
   homepage "https://github.com/felixgeelhaar/coverctl"
-  version "1.13.0"
+  version "1.14.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/coverctl/releases/download/v#{version}/coverctl-darwin-arm64.tar.gz"
-      sha256 "a62225238fe90e6b61d902ce74ddf340a3cee993843466069e0d21d5932cf575"
+      sha256 "e523769acc7beb1cf81053ea62b19e7fcfd8347c80d3994adf7ea2fd62aae194"
 
       def install
         bin.install "coverctl-darwin-arm64" => "coverctl"
       end
     else
       url "https://github.com/felixgeelhaar/coverctl/releases/download/v#{version}/coverctl-darwin-amd64.tar.gz"
-      sha256 "47fc4ffb0133c3df3233a394d35a9d7cadb5b450777b243c4ab9c6419397a272"
+      sha256 "febfa122fedb77e62ed5e19cebca0c8351aed9b3a8652cd5d5a0be624929043a"
 
       def install
         bin.install "coverctl-darwin-amd64" => "coverctl"
@@ -27,14 +27,14 @@ class Coverctl < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/coverctl/releases/download/v#{version}/coverctl-linux-arm64.tar.gz"
-      sha256 "efec7d9ccee478b304dc0640578f31973bec66d7929e6991e343cd985f3ddfbf"
+      sha256 "8ca566fabb8ee034c12c0a57075f6dc7d658db7f19c184a9273981265691ed2b"
 
       def install
         bin.install "coverctl-linux-arm64" => "coverctl"
       end
     else
       url "https://github.com/felixgeelhaar/coverctl/releases/download/v#{version}/coverctl-linux-amd64.tar.gz"
-      sha256 "c5e8720fe3426d4103aa93e76422c2bef5820a1b6d6de90b43c33802394a728a"
+      sha256 "eb0aac3b000817ed5255290da68b62e97c13f1fb4859eb74616687a6c2697087"
 
       def install
         bin.install "coverctl-linux-amd64" => "coverctl"
