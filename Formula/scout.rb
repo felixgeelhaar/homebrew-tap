@@ -5,22 +5,20 @@
 class Scout < Formula
   desc "MCP server for AI-powered browser automation"
   homepage "https://github.com/felixgeelhaar/scout"
-  version "1.3.1"
+  version "1.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/scout/releases/download/v1.3.1/scout_1.3.1_darwin_amd64.tar.gz"
-      sha256 "2913ab4fa568bc562e6315e5530469014b4e69f490d8d473a3f644eac524ecf0"
-
+      url "https://github.com/felixgeelhaar/scout/releases/download/v1.4.1/scout_1.4.1_darwin_amd64.tar.gz"
+      sha256 "4d2cc731a1185a7aaa3cd3a9396f3d9713d930a1469431b1bf2d339e5cef820dd"
       define_method(:install) do
         bin.install "scout"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/scout/releases/download/v1.3.1/scout_1.3.1_darwin_arm64.tar.gz"
-      sha256 "25164798bacc22e7d1641f2b66925450a71f3df71366c6a5bc483401484af1eb"
-
+      url "https://github.com/felixgeelhaar/scout/releases/download/v1.4.1/scout_1.4.1_darwin_arm64.tar.gz"
+      sha256 "aabe43c84c1d03e5e1f6eaa86a7288f4308c50d0767156cbc133edfafb82c15"
       define_method(:install) do
         bin.install "scout"
       end
@@ -29,15 +27,15 @@ class Scout < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/scout/releases/download/v1.3.1/scout_1.3.1_linux_amd64.tar.gz"
+      url "https://github.com/felixgeelhaar/scout/releases/download/v1.4.1/scout_1.4.1_linux_amd64.tar.gz"
       sha256 "36fe97f0037047f0b9022c4c2439008e28ae07e223968932a794c6fdb0d493ab"
       define_method(:install) do
         bin.install "scout"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/scout/releases/download/v1.3.1/scout_1.3.1_linux_arm64.tar.gz"
-      sha256 "a08f894488279db1bdef416d2303f3a6da4d0239f2a38ed54e490990322168be"
+      url "https://github.com/felixgeelhaar/scout/releases/download/v1.4.1/scout_1.4.1_linux_arm64.tar.gz"
+      sha256 "a80f894488279db1bdef41622303f3a6da4d0239f2a38ed54e490990322168be"
       define_method(:install) do
         bin.install "scout"
       end
