@@ -5,21 +5,21 @@
 class Nous < Formula
   desc "Decision / coordination layer of the cognitive stack"
   homepage "https://github.com/felixgeelhaar/nous"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/nous/releases/download/v0.1.1/nous_0.1.1_darwin_x86_64.tar.gz"
-      sha256 "fb0b656570a61f15d4813a355b53ea36feb379d1dc8d4beac3b40032ed9fbc94"
+      url "https://github.com/felixgeelhaar/nous/releases/download/v0.2.0/nous_0.2.0_darwin_x86_64.tar.gz"
+      sha256 "52bcf89af57e985cb3cd2de6adcdcf0bb5d8414c4ca4711a9ba427aa530cd4a4"
 
       define_method(:install) do
         bin.install "nous"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/nous/releases/download/v0.1.1/nous_0.1.1_darwin_arm64.tar.gz"
-      sha256 "689d2681da95f723f2d2f15486ab5d4907f5e9632f6ddb699c5eb8c206d0a5b2"
+      url "https://github.com/felixgeelhaar/nous/releases/download/v0.2.0/nous_0.2.0_darwin_arm64.tar.gz"
+      sha256 "84d54bc82a14c6cd9c2f790026a144d0a925096f3db81e4a674b82c2feb5336b"
 
       define_method(:install) do
         bin.install "nous"
@@ -29,15 +29,15 @@ class Nous < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/nous/releases/download/v0.1.1/nous_0.1.1_linux_x86_64.tar.gz"
-      sha256 "db7e26a16da6dec1c76895be5be9146416ddeb0006c8ef923ca3c56988c6f6d4"
+      url "https://github.com/felixgeelhaar/nous/releases/download/v0.2.0/nous_0.2.0_linux_x86_64.tar.gz"
+      sha256 "71874dba596ff8b0fe280a21b78f7b1c6b8261aef14fe283bf3c7674a5708bb8"
       define_method(:install) do
         bin.install "nous"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/nous/releases/download/v0.1.1/nous_0.1.1_linux_arm64.tar.gz"
-      sha256 "dffc1d1e5d8d72937fba63ee811af986df7b51b303ec34f43b27336671eee31a"
+      url "https://github.com/felixgeelhaar/nous/releases/download/v0.2.0/nous_0.2.0_linux_arm64.tar.gz"
+      sha256 "0aea149e4d418a523818727b2065c35d18e1887ebd02de740cd569a471eaa5d2"
       define_method(:install) do
         bin.install "nous"
       end
