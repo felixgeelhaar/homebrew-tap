@@ -1,6 +1,6 @@
 cask "nomi" do
-  version "0.1.2"
-  sha256 "4b1b23de62fe8d3811bc73566ae065f8d0418fe30fe8e6cc6b5aa7957fbdf894"
+  version "0.1.3"
+  sha256 "c6e16531dcac1f00a41b4ad370cee4a3648a770457cf33c0e14281883e37941a"
 
   url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/Nomi_#{version}_universal.dmg"
   name "Nomi"
