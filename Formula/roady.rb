@@ -5,50 +5,74 @@
 class Roady < Formula
   desc "A planning-first system of record for software work."
   homepage "https://felixgeelhaar.github.io/roady/"
-  version "0.9.2"
+  version "0.10.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/roady/releases/download/v0.9.2/roady_Darwin_x86_64.tar.gz"
-      sha256 "5f83d274b7136dd2de898f401afb139c11f7d7fc241e9aa02f04f45f6984fd91"
+      url "https://github.com/felixgeelhaar/roady/releases/download/v0.10.1/roady_Darwin_x86_64.tar.gz"
+      sha256 "b8b1c41899f6d3ccade0b7355c399f8375f902ffd5d8898c51eece85ee202f57"
 
       define_method(:install) do
         bin.install "roady"
         bin.install "roady-plugin-linear"
         bin.install "roady-plugin-jira"
+        bin.install "roady-plugin-github"
+        bin.install "roady-plugin-asana"
+        bin.install "roady-plugin-notion"
+        bin.install "roady-plugin-trello"
+        bin.install "roady-plugin-mock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/roady/releases/download/v0.9.2/roady_Darwin_arm64.tar.gz"
-      sha256 "d7656435960c2cb92f91249a04bf9564f15b45163f92194bcd3ac0914adeca27"
+      url "https://github.com/felixgeelhaar/roady/releases/download/v0.10.1/roady_Darwin_arm64.tar.gz"
+      sha256 "9c431484a2b28e2b385c5d954940d3258f2b762191f1ddaf9ad0662bee1c244f"
 
       define_method(:install) do
         bin.install "roady"
         bin.install "roady-plugin-linear"
         bin.install "roady-plugin-jira"
+        bin.install "roady-plugin-github"
+        bin.install "roady-plugin-asana"
+        bin.install "roady-plugin-notion"
+        bin.install "roady-plugin-trello"
+        bin.install "roady-plugin-mock"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/roady/releases/download/v0.9.2/roady_Linux_x86_64.tar.gz"
-      sha256 "4b5d9533f5e2d77ff850e738d7fd20bcaee48e1ce76582c79ca57b1c0fb28952"
+      url "https://github.com/felixgeelhaar/roady/releases/download/v0.10.1/roady_Linux_x86_64.tar.gz"
+      sha256 "5c2be083b45371f3a5b5dcb85f624b7ce024cc34947962f83c51c786a69589ee"
       define_method(:install) do
         bin.install "roady"
         bin.install "roady-plugin-linear"
         bin.install "roady-plugin-jira"
+        bin.install "roady-plugin-github"
+        bin.install "roady-plugin-asana"
+        bin.install "roady-plugin-notion"
+        bin.install "roady-plugin-trello"
+        bin.install "roady-plugin-mock"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/roady/releases/download/v0.9.2/roady_Linux_arm64.tar.gz"
-      sha256 "2589ba7d4ef74a3f3fa11c5052be8904e368f001a740a6b010e6de46937fbf3f"
+      url "https://github.com/felixgeelhaar/roady/releases/download/v0.10.1/roady_Linux_arm64.tar.gz"
+      sha256 "ef69f1381b902e2cb0d65a71e6881201c7a8360270577da8806fe93dee4487a4"
       define_method(:install) do
         bin.install "roady"
         bin.install "roady-plugin-linear"
         bin.install "roady-plugin-jira"
+        bin.install "roady-plugin-github"
+        bin.install "roady-plugin-asana"
+        bin.install "roady-plugin-notion"
+        bin.install "roady-plugin-trello"
+        bin.install "roady-plugin-mock"
       end
     end
+  end
+
+  test do
+    system "#{bin}/roady --version"
   end
 end
