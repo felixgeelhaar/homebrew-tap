@@ -5,13 +5,13 @@
 class Praxis < Formula
   desc "Praxis — execution layer of the Mnemos/Chronos/Nous/Praxis cognitive stack"
   homepage "https://github.com/felixgeelhaar/praxis"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/praxis/releases/download/v0.2.1/praxis_0.2.1_darwin_amd64.tar.gz"
-      sha256 "bba17e361f4d3a50d2375987587772c919795adf0fc2b23e99be100bd8c4c224"
+      url "https://github.com/felixgeelhaar/praxis/releases/download/v0.3.0/praxis_0.3.0_darwin_amd64.tar.gz"
+      sha256 "7119f06132ac5ef6493696dcbfd7d4c4d4efdfa3d18831417e88a05dcd086b3c"
 
       define_method(:install) do
         bin.install "praxis"
@@ -19,8 +19,8 @@ class Praxis < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/praxis/releases/download/v0.2.1/praxis_0.2.1_darwin_arm64.tar.gz"
-      sha256 "8840d06d2262012a1dd48dac2d6e3451296b40baeeeaf0a80d86bbe5ba85879c"
+      url "https://github.com/felixgeelhaar/praxis/releases/download/v0.3.0/praxis_0.3.0_darwin_arm64.tar.gz"
+      sha256 "d7da23ff11d9ee2b0eb6b328809b10b1336691bce8dd9e78dd7461a1d9c3bbcd"
 
       define_method(:install) do
         bin.install "praxis"
@@ -31,16 +31,16 @@ class Praxis < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/praxis/releases/download/v0.2.1/praxis_0.2.1_linux_amd64.tar.gz"
-      sha256 "9b7cdf96d7e74c2721b14230e39a3a25ea4bc52fa6cd1a20b7156db61338f8d1"
+      url "https://github.com/felixgeelhaar/praxis/releases/download/v0.3.0/praxis_0.3.0_linux_amd64.tar.gz"
+      sha256 "568719dbcb1c21f35a79244230c76f73ab703978784e3777830224cd2481f1e0"
       define_method(:install) do
         bin.install "praxis"
         bin.install "praxis-pluginhost"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/praxis/releases/download/v0.2.1/praxis_0.2.1_linux_arm64.tar.gz"
-      sha256 "00af482cfeffe8c03a908d1928c79dd056e9466198df1e38c88575116fb05640"
+      url "https://github.com/felixgeelhaar/praxis/releases/download/v0.3.0/praxis_0.3.0_linux_arm64.tar.gz"
+      sha256 "9df86d7035719d3ddb161fff138b6d61b3cced120fef44fe98ee57593e3e9720"
       define_method(:install) do
         bin.install "praxis"
         bin.install "praxis-pluginhost"
