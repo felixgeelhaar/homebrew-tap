@@ -5,13 +5,13 @@
 class Nox < Formula
   desc "Language-agnostic security scanner with first-class AI application security"
   homepage "https://github.com/nox-hq/nox"
-  version "0.9.3"
+  version "0.9.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nox-hq/nox/releases/download/v0.9.3/nox_0.9.3_darwin_amd64.tar.gz"
-      sha256 "0615c0b58e03b8c6202df084aa8f20ceebcd4de6ac3be113889dc19e412f3876"
+      url "https://github.com/nox-hq/nox/releases/download/v0.9.4/nox_0.9.4_darwin_amd64.tar.gz"
+      sha256 "8d4ae20c896a3447a06485067bd5e4da578258ef2c0ae850f4b59932a59d0ce5"
 
       define_method(:install) do
         bin.install "nox"
@@ -19,8 +19,8 @@ class Nox < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nox-hq/nox/releases/download/v0.9.3/nox_0.9.3_darwin_arm64.tar.gz"
-      sha256 "99d703112fc15e25bd0c92b31888d903df2d6228eaf1b77e9a187d2de0ebdfbe"
+      url "https://github.com/nox-hq/nox/releases/download/v0.9.4/nox_0.9.4_darwin_arm64.tar.gz"
+      sha256 "076ad1e847631da2f951967894353ad70a61c4f127670455a294962286472038"
 
       define_method(:install) do
         bin.install "nox"
@@ -31,16 +31,16 @@ class Nox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nox-hq/nox/releases/download/v0.9.3/nox_0.9.3_linux_amd64.tar.gz"
-      sha256 "175f193772a3511ff3587c71e1a749bda910a259cfa2b945f7caca630dd4dca2"
+      url "https://github.com/nox-hq/nox/releases/download/v0.9.4/nox_0.9.4_linux_amd64.tar.gz"
+      sha256 "8631b5d1ea7f5a807f1848eb676d924ddc62eaf51545cc5bfcc795950e32a110"
       define_method(:install) do
         bin.install "nox"
         bin.install "bin/nox-plugin-reachability"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nox-hq/nox/releases/download/v0.9.3/nox_0.9.3_linux_arm64.tar.gz"
-      sha256 "6a208b08465e3595c3495766b9d1fb67adb373d851592b371c12d4f4dca498a7"
+      url "https://github.com/nox-hq/nox/releases/download/v0.9.4/nox_0.9.4_linux_arm64.tar.gz"
+      sha256 "a8a5fd93109cf73f3f3429c48cd878651972b5e667dfcad1a904dde13e850416"
       define_method(:install) do
         bin.install "nox"
         bin.install "bin/nox-plugin-reachability"
