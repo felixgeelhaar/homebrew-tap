@@ -9,7 +9,7 @@ class Tokenops < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.1.0/tokenops_0.1.0_darwin_amd64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "tokenops"
@@ -18,7 +18,7 @@ class Tokenops < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.1.0/tokenops_0.1.0_darwin_arm64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "tokenops"
@@ -30,7 +30,7 @@ class Tokenops < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.1.0/tokenops_0.1.0_linux_amd64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "tokenops"
@@ -39,7 +39,7 @@ class Tokenops < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.1.0/tokenops_0.1.0_linux_arm64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "tokenops"
