@@ -5,13 +5,13 @@
 class Roady < Formula
   desc "A planning-first system of record for software work."
   homepage "https://felixgeelhaar.github.io/roady/"
-  version "0.10.1"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/roady/releases/download/v0.10.1/roady_Darwin_x86_64.tar.gz"
-      sha256 "b8b1c41899f6d3ccade0b7355c399f8375f902ffd5d8898c51eece85ee202f57"
+      url "https://github.com/felixgeelhaar/roady/releases/download/v0.11.0/roady_Darwin_x86_64.tar.gz"
+      sha256 "42dce01ff68b7e439ce1133e79bf5a42cffcbe023dfaea474014690f89162e48"
 
       define_method(:install) do
         bin.install "roady"
@@ -25,8 +25,8 @@ class Roady < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/roady/releases/download/v0.10.1/roady_Darwin_arm64.tar.gz"
-      sha256 "9c431484a2b28e2b385c5d954940d3258f2b762191f1ddaf9ad0662bee1c244f"
+      url "https://github.com/felixgeelhaar/roady/releases/download/v0.11.0/roady_Darwin_arm64.tar.gz"
+      sha256 "c28878482a6599dec7f9603474db2694a8a220c08ab95f06f304bde8c27a1325"
 
       define_method(:install) do
         bin.install "roady"
@@ -43,8 +43,8 @@ class Roady < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/roady/releases/download/v0.10.1/roady_Linux_x86_64.tar.gz"
-      sha256 "5c2be083b45371f3a5b5dcb85f624b7ce024cc34947962f83c51c786a69589ee"
+      url "https://github.com/felixgeelhaar/roady/releases/download/v0.11.0/roady_Linux_x86_64.tar.gz"
+      sha256 "1edd8a85cfa49a5e80613f531322018478ac1247b6b06ba836a8d35aadf76cfc"
       define_method(:install) do
         bin.install "roady"
         bin.install "roady-plugin-linear"
@@ -57,8 +57,8 @@ class Roady < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/roady/releases/download/v0.10.1/roady_Linux_arm64.tar.gz"
-      sha256 "ef69f1381b902e2cb0d65a71e6881201c7a8360270577da8806fe93dee4487a4"
+      url "https://github.com/felixgeelhaar/roady/releases/download/v0.11.0/roady_Linux_arm64.tar.gz"
+      sha256 "89630d29daf0b100410663287dd37f60ca64d23f2e45cb3976e02b428e122ddd"
       define_method(:install) do
         bin.install "roady"
         bin.install "roady-plugin-linear"
