@@ -5,21 +5,21 @@
 class Scry < Formula
   desc "Searchable GraphQL ↔ MCP bridge for AI agents"
   homepage "https://github.com/felixgeelhaar/scry"
-  version "0.7.1"
+  version "0.7.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/scry/releases/download/v0.7.1/scry_0.7.1_darwin_amd64.tar.gz"
-      sha256 "0cf6ab33c92e60f2db8211ccfec37e333ed98343f4b54a79e155976fe54bb514"
+      url "https://github.com/felixgeelhaar/scry/releases/download/v0.7.2/scry_0.7.2_darwin_amd64.tar.gz"
+      sha256 "7ffafb7ebc422e8f67367064ed7c5ff3117512d908b35082e668c723d7759ad9"
 
       define_method(:install) do
         bin.install "scry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/scry/releases/download/v0.7.1/scry_0.7.1_darwin_arm64.tar.gz"
-      sha256 "c4c75fa3a328e9cf028baf9ed33a1e0e5d0b7e911500257af91cbe7d147d1cfb"
+      url "https://github.com/felixgeelhaar/scry/releases/download/v0.7.2/scry_0.7.2_darwin_arm64.tar.gz"
+      sha256 "d076e6521cc6a87332fa2e94f94f33c69a4c7e83c7ba5b95615092c39f8a9ffc"
 
       define_method(:install) do
         bin.install "scry"
@@ -29,15 +29,15 @@ class Scry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/scry/releases/download/v0.7.1/scry_0.7.1_linux_amd64.tar.gz"
-      sha256 "0e2f331175c26fb92c7ce7902037e7c27ac2f3294cac79690b6bcf3fe4ab0d28"
+      url "https://github.com/felixgeelhaar/scry/releases/download/v0.7.2/scry_0.7.2_linux_amd64.tar.gz"
+      sha256 "18ec890c7b8bc316f49c7363d1f501d9e9bed3ad3bf8e492a7eb8a2a9d42487e"
       define_method(:install) do
         bin.install "scry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/scry/releases/download/v0.7.1/scry_0.7.1_linux_arm64.tar.gz"
-      sha256 "eb77f7b2aa2c96c8164f298f606be88ec0a85e026c517fdc282a41ac75e003e7"
+      url "https://github.com/felixgeelhaar/scry/releases/download/v0.7.2/scry_0.7.2_linux_arm64.tar.gz"
+      sha256 "b3f6c07ac8c426458ef27281da300a2c12a32136cb64d033df723bb3150c7c1d"
       define_method(:install) do
         bin.install "scry"
       end
