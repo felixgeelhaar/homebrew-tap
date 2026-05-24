@@ -5,21 +5,21 @@
 class Chronos < Formula
   desc "Time / Pattern Perception in the cognitive stack"
   homepage "https://github.com/felixgeelhaar/chronos"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/chronos/releases/download/v0.4.0/chronos_0.4.0_darwin_x86_64.tar.gz"
-      sha256 "09adbeb10655188c70c202e3ec123323399ee31260b21cbe606c4d85b2821b28"
+      url "https://github.com/felixgeelhaar/chronos/releases/download/v0.5.0/chronos_0.5.0_darwin_x86_64.tar.gz"
+      sha256 "db2aa19fc7e991c914c826246341428abcb91e7586e450f53b507c8568ecc02a"
 
       define_method(:install) do
         bin.install "chronos"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/chronos/releases/download/v0.4.0/chronos_0.4.0_darwin_arm64.tar.gz"
-      sha256 "0b5b8fc1b267de1a734d88f4a4794b5087e4ada62f2a690dd1e8ac870a804943"
+      url "https://github.com/felixgeelhaar/chronos/releases/download/v0.5.0/chronos_0.5.0_darwin_arm64.tar.gz"
+      sha256 "554000386f662f3e14ef689dfdaf53f73df1b1aa3dab5ff6f48c3650a8d37ea5"
 
       define_method(:install) do
         bin.install "chronos"
@@ -29,15 +29,15 @@ class Chronos < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/chronos/releases/download/v0.4.0/chronos_0.4.0_linux_x86_64.tar.gz"
-      sha256 "67ad86899cd869c458f94e2baad18089ebb61c3c67f45dcd1913e66c500f62b6"
+      url "https://github.com/felixgeelhaar/chronos/releases/download/v0.5.0/chronos_0.5.0_linux_x86_64.tar.gz"
+      sha256 "e425c7b8fd62507a198303dd42d0801282f438ba23bb5ab0be2abee5962a94f2"
       define_method(:install) do
         bin.install "chronos"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/chronos/releases/download/v0.4.0/chronos_0.4.0_linux_arm64.tar.gz"
-      sha256 "2e3d258cadda44a761e9d5033dd8d78fc987863439d7b27635c7ddb08eb195ef"
+      url "https://github.com/felixgeelhaar/chronos/releases/download/v0.5.0/chronos_0.5.0_linux_arm64.tar.gz"
+      sha256 "6b1a7faa44ca5f453ec4f879721285b2b6df58094f27992e71500a40e83e9b6f"
       define_method(:install) do
         bin.install "chronos"
       end
