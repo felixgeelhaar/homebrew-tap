@@ -11,7 +11,7 @@ class Nox < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nox-hq/nox/releases/download/v0.10.2/nox_0.10.2_darwin_amd64.tar.gz"
-      sha256 "b65564d0a5cb6bca37f2e18e8079c51519012474adb531f0993de86baef028f2"
+      sha256 "165ff54dd9d60850f99ef079d013ff78823c98097eb3e8f7522cfd3e5e6a2a4a"
 
       define_method(:install) do
         bin.install "nox"
@@ -20,7 +20,7 @@ class Nox < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nox-hq/nox/releases/download/v0.10.2/nox_0.10.2_darwin_arm64.tar.gz"
-      sha256 "d84f4be8806b55be7bbe8d8ef9e3050fa3f50fd29f2099a667db93f2ec66f30d"
+      sha256 "5d72918e888923ceee9917cf0f3d8f8a9e2c6b694b97c686862c8d5f36174315"
 
       define_method(:install) do
         bin.install "nox"
@@ -32,7 +32,7 @@ class Nox < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/nox-hq/nox/releases/download/v0.10.2/nox_0.10.2_linux_amd64.tar.gz"
-      sha256 "25e3904764e571f912da20ca22ba569b5fe1706a0a66cad0fa5b0bfd95c83bb1"
+      sha256 "e8bcfdfc5c09843a1afb7821fe0f89ecdf8aaef8cc8c5cf312d417f8bb7c29b9"
       define_method(:install) do
         bin.install "nox"
         bin.install "bin/nox-plugin-reachability"
@@ -40,7 +40,7 @@ class Nox < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/nox-hq/nox/releases/download/v0.10.2/nox_0.10.2_linux_arm64.tar.gz"
-      sha256 "720afb63879d384ab1ac41b3d989c20c1bd848a26ee4257427df10770c668553"
+      sha256 "751263847ff4d0464af717ad4d0978484ab189c5ec4c9ae7a8bc9afa387ddd25"
       define_method(:install) do
         bin.install "nox"
         bin.install "bin/nox-plugin-reachability"
