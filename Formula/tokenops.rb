@@ -5,13 +5,13 @@
 class Tokenops < Formula
   desc "Open-source operational intelligence layer for AI systems"
   homepage "https://github.com/felixgeelhaar/tokenops"
-  version "0.21.1"
+  version "0.22.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.21.1/tokenops_0.21.1_darwin_amd64.tar.gz"
-      sha256 "90a902b0871745b20e48319e8f120a3371274c4dd8feb141f5570c00da07b3ce"
+      url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.22.0/tokenops_0.22.0_darwin_amd64.tar.gz"
+      sha256 "9d9f679511584857b0267d326cb579ff9a1bb3e949d36cc8871ed200980270ba"
 
       define_method(:install) do
         bin.install "tokenops"
@@ -19,8 +19,8 @@ class Tokenops < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.21.1/tokenops_0.21.1_darwin_arm64.tar.gz"
-      sha256 "fd01310282f47c07034d372a8c4bb2041b523956d8dbad22ba151878378ff220"
+      url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.22.0/tokenops_0.22.0_darwin_arm64.tar.gz"
+      sha256 "6025d0885d2d8504b71ca5fe96c866ee26fee05d5f4546d2639ee890327a4d66"
 
       define_method(:install) do
         bin.install "tokenops"
@@ -31,16 +31,16 @@ class Tokenops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.21.1/tokenops_0.21.1_linux_amd64.tar.gz"
-      sha256 "0cddeff8cc79b53bb262ca7b5c5c0114a7be4aa83d121a27337851136dd65f80"
+      url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.22.0/tokenops_0.22.0_linux_amd64.tar.gz"
+      sha256 "b67fb9d7a19ff33cd7f8610730ef41db0a0ebc7d4920447e1dd3667572371fdb"
       define_method(:install) do
         bin.install "tokenops"
         bin.install "tokenopsd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.21.1/tokenops_0.21.1_linux_arm64.tar.gz"
-      sha256 "d93d0d0f94af515a0caf605fd1ad81c57f782502ddde16f1f30051ed1f58cc27"
+      url "https://github.com/felixgeelhaar/tokenops/releases/download/v0.22.0/tokenops_0.22.0_linux_arm64.tar.gz"
+      sha256 "ea321a77d4a40a7ed7a85b1633f3bda242b5a035bf695ae8445da7767c109e4b"
       define_method(:install) do
         bin.install "tokenops"
         bin.install "tokenopsd"
