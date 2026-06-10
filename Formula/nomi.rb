@@ -18,28 +18,28 @@
 class Nomi < Formula
   desc "CLI client for the Nomi local-first agent platform"
   homepage "https://github.com/felixgeelhaar/nomi"
-  version "0.2.4"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/nomi-#{version}-darwin-arm64.tar.gz"
-      sha256 "85940ef90a6a906cad53df6bf676ecf3eb380db1d3e72052973bb139195bf7c2"
+      sha256 "ab166c7dd97ad93ce09b74a461400662e00c61ce84b137da0c1fae7203d40945"
     end
     on_intel do
       url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/nomi-#{version}-darwin-amd64.tar.gz"
-      sha256 "9bf77fdc0c070ed538ede0f46c08ecad1bd0ede3409bb4d1308a44d2fa7a4f4f"
+      sha256 "5099c2226847946fef085bb0ca5fdfdc5a392205b0d32217092f9dbb846613d0"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/nomi-#{version}-linux-arm64.tar.gz"
-      sha256 "152afcd95a64bf6a900a2cc89ce6e01c0459df16f041317ed1f18e52fe111b82"
+      sha256 "e20c50913d02f0354e31cc5634f88b3f003456e30cf66decb5a662873395a582"
     end
     on_intel do
       url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/nomi-#{version}-linux-amd64.tar.gz"
-      sha256 "087ed1c19689d1b5ed815fcc88ad2b4ef68c9d6e0eb892b2010741005cc5168b"
+      sha256 "79d272130119a37568fb73841f9ffe0ac156ec635fa25a73290507c861e8f05e"
     end
   end
 
