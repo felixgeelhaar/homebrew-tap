@@ -4,22 +4,22 @@ cask "warden" do
 
   on_macos do
     on_intel do
-      sha256 "60cebff587a4699105182ecd9e0e0c48f276f94015a279481cb63dfffe3e27f5"
+      sha256 "6ed669868d45183c61e681455a1f4109a3bfbd5e06382a7d23dbfb7c0006e2ac"
       url "https://github.com/klarlabs-studio/warden/releases/download/v#{version}/warden_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "60cfe1bb001cafb0aa6be7cb4bf50e599423d62ea2a203f403356bc3a906c0ce"
+      sha256 "c9236fdd7f8530a7f527043d6a6c8c651d272a5167d0266493f370e8e8a2eed6"
       url "https://github.com/klarlabs-studio/warden/releases/download/v#{version}/warden_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "ef9496ecf332eaed8a52c2c220b7853c313916498ff0aa549f22f46045eb3bb4"
+      sha256 "dedef86770e92e13170529ff15da7ad61eff1441ff6c625460f562978c86b9f6"
       url "https://github.com/klarlabs-studio/warden/releases/download/v#{version}/warden_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "f69374db936ffeacc82454cc951e96ed70792564af61914176acd7cbb4fff3c0"
+      sha256 "c7ee3b13059610c51eb3e5e1eb6288b86d570fa1c430449148fd656ff81e2be6"
       url "https://github.com/klarlabs-studio/warden/releases/download/v#{version}/warden_#{version}_linux_arm64.tar.gz"
     end
   end
