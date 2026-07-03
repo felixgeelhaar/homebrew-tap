@@ -5,13 +5,13 @@
 class Tokenops < Formula
   desc "Open-source operational intelligence layer for AI systems"
   homepage "https://github.com/klarlabs-studio/tokenops"
-  version "0.32.0"
+  version "0.33.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/klarlabs-studio/tokenops/releases/download/v0.32.0/tokenops_0.32.0_darwin_amd64.tar.gz"
-      sha256 "c6a86dc85a1a9e20ef1d301a306a2d1f8ae83eea753d4836442f16de1fb19306"
+      url "https://github.com/klarlabs-studio/tokenops/releases/download/v0.33.0/tokenops_0.33.0_darwin_amd64.tar.gz"
+      sha256 "21dbcf901b217453eeb0eed7ca74556b468b8ff436ecc43fa6496d3dd585826b"
 
       define_method(:install) do
         bin.install "tokenops"
@@ -19,8 +19,8 @@ class Tokenops < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/klarlabs-studio/tokenops/releases/download/v0.32.0/tokenops_0.32.0_darwin_arm64.tar.gz"
-      sha256 "9dedc20ee29ea0b378006a47eca5334474d312cb4f4add76d184435d78cf6667"
+      url "https://github.com/klarlabs-studio/tokenops/releases/download/v0.33.0/tokenops_0.33.0_darwin_arm64.tar.gz"
+      sha256 "0a99c0c91deb53b1aa304ec29c1b1429983040c80292f756acff5312bfb3f34c"
 
       define_method(:install) do
         bin.install "tokenops"
@@ -31,16 +31,16 @@ class Tokenops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/klarlabs-studio/tokenops/releases/download/v0.32.0/tokenops_0.32.0_linux_amd64.tar.gz"
-      sha256 "e927194311d7e78e004df85834149f5bc65793e46f6e97e06036b4076d53608d"
+      url "https://github.com/klarlabs-studio/tokenops/releases/download/v0.33.0/tokenops_0.33.0_linux_amd64.tar.gz"
+      sha256 "f33fda53d2edaffd9041f2a55f567886e3f623e4468f39cb0b8378e0e931ad49"
       define_method(:install) do
         bin.install "tokenops"
         bin.install "tokenopsd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/klarlabs-studio/tokenops/releases/download/v0.32.0/tokenops_0.32.0_linux_arm64.tar.gz"
-      sha256 "7944c4cae442c313ea30dd8f31951b139cbcdc8f9db1f25635989b0e219c9c4a"
+      url "https://github.com/klarlabs-studio/tokenops/releases/download/v0.33.0/tokenops_0.33.0_linux_arm64.tar.gz"
+      sha256 "efbba968b08a9cebc542a585e22beafb78319139080f36956a49a65946877b88"
       define_method(:install) do
         bin.install "tokenops"
         bin.install "tokenopsd"
