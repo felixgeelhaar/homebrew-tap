@@ -8,38 +8,38 @@
 #
 # The CLI talks to a running `nomid` over REST. It does NOT bundle the
 # daemon — install the cask if you want the all-in-one desktop, or use
-# Docker / `go install github.com/felixgeelhaar/nomi/cmd/nomid` for a
+# Docker / `go install go.klarlabs.de/nomi/cmd/nomid` for a
 # headless deploy.
 #
 # SHA256s are filled in by the release pipeline; the placeholders below
 # get rewritten by `gh release upload` + a tap-bump step. Until that's
 # wired, run `brew install --build-from-source felixgeelhaar/tap/nomi`
-# (or use `go install github.com/felixgeelhaar/nomi/cmd/nomi@latest`).
+# (or use `go install go.klarlabs.de/nomi/cmd/nomi@latest`).
 class Nomi < Formula
   desc "CLI client for the Nomi local-first agent platform"
-  homepage "https://github.com/felixgeelhaar/nomi"
-  version "0.2.4"
+  homepage "https://github.com/klarlabs-studio/nomi"
+  version "0.5.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/nomi-#{version}-darwin-arm64.tar.gz"
-      sha256 "85940ef90a6a906cad53df6bf676ecf3eb380db1d3e72052973bb139195bf7c2"
+      url "https://github.com/klarlabs-studio/nomi/releases/download/v#{version}/nomi-#{version}-darwin-arm64.tar.gz"
+      sha256 "37161a1958358a46f646bddf5ff592f4cbbe7ab846e415de4459cfdf661e469e"
     end
     on_intel do
-      url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/nomi-#{version}-darwin-amd64.tar.gz"
-      sha256 "9bf77fdc0c070ed538ede0f46c08ecad1bd0ede3409bb4d1308a44d2fa7a4f4f"
+      url "https://github.com/klarlabs-studio/nomi/releases/download/v#{version}/nomi-#{version}-darwin-amd64.tar.gz"
+      sha256 "fe0e8b21d2f856f94ef528eee85c6f7d6b8d96fa5bd10ebc382dc57a950f916e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/nomi-#{version}-linux-arm64.tar.gz"
-      sha256 "152afcd95a64bf6a900a2cc89ce6e01c0459df16f041317ed1f18e52fe111b82"
+      url "https://github.com/klarlabs-studio/nomi/releases/download/v#{version}/nomi-#{version}-linux-arm64.tar.gz"
+      sha256 "28fe7095c7d68f8e5ed64602ea196fa010b821055236c0243956642c9dec581e"
     end
     on_intel do
-      url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/nomi-#{version}-linux-amd64.tar.gz"
-      sha256 "087ed1c19689d1b5ed815fcc88ad2b4ef68c9d6e0eb892b2010741005cc5168b"
+      url "https://github.com/klarlabs-studio/nomi/releases/download/v#{version}/nomi-#{version}-linux-amd64.tar.gz"
+      sha256 "8521505df8af238a236bfa7d3e0e5e54891131d1e12dd0bab46bd3a35af1cb70"
     end
   end
 
@@ -48,7 +48,7 @@ class Nomi < Formula
   # pre-built bottle. Lets early adopters install before the release
   # pipeline has populated SHA256s.
   head do
-    url "https://github.com/felixgeelhaar/nomi.git", branch: "main"
+    url "https://github.com/klarlabs-studio/nomi.git", branch: "main"
     depends_on "go" => :build
   end
 
@@ -56,9 +56,9 @@ class Nomi < Formula
     if build.head?
       ldflags = %W[
         -s -w
-        -X github.com/felixgeelhaar/nomi/internal/buildinfo.Version=#{version}
-        -X github.com/felixgeelhaar/nomi/internal/buildinfo.Commit=brew-head
-        -X github.com/felixgeelhaar/nomi/internal/buildinfo.BuildDate=#{Time.now.utc.iso8601}
+        -X go.klarlabs.de/nomi/internal/buildinfo.Version=#{version}
+        -X go.klarlabs.de/nomi/internal/buildinfo.Commit=brew-head
+        -X go.klarlabs.de/nomi/internal/buildinfo.BuildDate=#{Time.now.utc.iso8601}
       ]
       system "go", "build", "-trimpath", "-ldflags", ldflags.join(" "),
              "-o", bin/"nomi", "./cmd/nomi"
