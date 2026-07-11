@@ -5,13 +5,13 @@
 class Temper < Formula
   desc "Adaptive AI pairing for learning"
   homepage "https://github.com/felixgeelhaar/temper"
-  version "2.0.2"
+  version "2.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/felixgeelhaar/temper/releases/download/v2.0.2/temper_2.0.2_darwin_amd64.tar.gz"
-      sha256 "29544abe855ea47e52e052aedaeb503049632dfb893c476175478d9f89400287"
+      url "https://github.com/felixgeelhaar/temper/releases/download/v2.1.0/temper_2.1.0_darwin_amd64.tar.gz"
+      sha256 "3f6543e61c8ad15a98332afc2fde582b2579e54966567ba89b6080dfa3d45a0c"
 
       define_method(:install) do
         bin.install "temper"
@@ -19,8 +19,8 @@ class Temper < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/felixgeelhaar/temper/releases/download/v2.0.2/temper_2.0.2_darwin_arm64.tar.gz"
-      sha256 "d350229a86a4557bb10d597140946947900697ea2be0ff32556e984e591d8049"
+      url "https://github.com/felixgeelhaar/temper/releases/download/v2.1.0/temper_2.1.0_darwin_arm64.tar.gz"
+      sha256 "2a0ae611905977e2fe722f8265712c7b0e33f745e2d4953553d6525c62a5c68d"
 
       define_method(:install) do
         bin.install "temper"
@@ -31,16 +31,16 @@ class Temper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/temper/releases/download/v2.0.2/temper_2.0.2_linux_amd64.tar.gz"
-      sha256 "a87b87f8dcf738b24bd7f27f7793c6b71d3890c54d00296278abb9a05bc8cb17"
+      url "https://github.com/felixgeelhaar/temper/releases/download/v2.1.0/temper_2.1.0_linux_amd64.tar.gz"
+      sha256 "4acbdc0757926224dfe4f0cc7596eb4406a9a5c7092689673abf3c20fc78edca"
       define_method(:install) do
         bin.install "temper"
         bin.install "temperd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/felixgeelhaar/temper/releases/download/v2.0.2/temper_2.0.2_linux_arm64.tar.gz"
-      sha256 "0fed257de724120709beafadc0ffc206d10631f557d55f82d98c9e96dc16e15e"
+      url "https://github.com/felixgeelhaar/temper/releases/download/v2.1.0/temper_2.1.0_linux_arm64.tar.gz"
+      sha256 "eb2d0f160acd460cdd170584e515af836bfbd71cb1a425b4375fd5b430959703"
       define_method(:install) do
         bin.install "temper"
         bin.install "temperd"
