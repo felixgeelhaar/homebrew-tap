@@ -1,8 +1,8 @@
 cask "nomi" do
-  version "0.2.4"
-  sha256 "93a2a9586b7cdd82f8021816d7f4874eef4168b3fd52a826900969337c702de9"
+  version "0.5.0"
+  sha256 "08da6619a451bb54b397109cc7f612d192e9bc7a8da2af73f68bdd930eca6b19"
 
-  url "https://github.com/felixgeelhaar/nomi/releases/download/v#{version}/Nomi_#{version}_universal.dmg"
+  url "https://github.com/klarlabs-studio/nomi/releases/download/v#{version}/Nomi_#{version}_universal.dmg"
   name "Nomi"
   desc "Local-first, state-driven agent platform"
   homepage "https://nomi.ai/"
