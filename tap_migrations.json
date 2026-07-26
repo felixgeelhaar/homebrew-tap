@@ -1,3 +1,6 @@
 {
-  "scout": "klarlabs-studio/tap"
+  "roady": "klarlabs-studio/tap",
+  "scout": "klarlabs-studio/tap",
+  "tokenops": "klarlabs-studio/tap",
+  "warden": "klarlabs-studio/tap"
 }
