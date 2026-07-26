@@ -5,21 +5,21 @@
 class Nox < Formula
   desc "Language-agnostic security scanner with first-class AI application security"
   homepage "https://github.com/nox-hq/nox"
-  version "1.19.0"
+  version "1.19.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nox-hq/nox/releases/download/v1.19.0/nox_1.19.0_darwin_amd64.tar.gz"
-      sha256 "a2392cd0c8b7fd4a307af2586e207028176eda52b4655f4741cf113cb768a30e"
+      url "https://github.com/nox-hq/nox/releases/download/v1.19.1/nox_1.19.1_darwin_amd64.tar.gz"
+      sha256 "ba253664d98ed39dac335fdcd0f60df7e9799c216209a6e06c6433e95e8e0d83"
 
       define_method(:install) do
         bin.install "nox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nox-hq/nox/releases/download/v1.19.0/nox_1.19.0_darwin_arm64.tar.gz"
-      sha256 "731b30e15954c1b1b307e4af7f00aa34c5dfc8ffa53d57c822ed0b6496551b08"
+      url "https://github.com/nox-hq/nox/releases/download/v1.19.1/nox_1.19.1_darwin_arm64.tar.gz"
+      sha256 "14448682bfcc8073c7e67f86c30da881b92d8a29481a586008990bdb4363ddfb"
 
       define_method(:install) do
         bin.install "nox"
@@ -29,15 +29,15 @@ class Nox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nox-hq/nox/releases/download/v1.19.0/nox_1.19.0_linux_amd64.tar.gz"
-      sha256 "9d1029a686bd8df3477ef3034d65ab477631e7b2cdfee385e2b20295ffe834b8"
+      url "https://github.com/nox-hq/nox/releases/download/v1.19.1/nox_1.19.1_linux_amd64.tar.gz"
+      sha256 "03c93c85c776613a09ec7fc663610df1d9929ad125c1b0b521479036a20077cd"
       define_method(:install) do
         bin.install "nox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nox-hq/nox/releases/download/v1.19.0/nox_1.19.0_linux_arm64.tar.gz"
-      sha256 "ff870e6f13005cf5b75586fc7d0e034dc02fde810bcfee6b3d6b3c74744b4925"
+      url "https://github.com/nox-hq/nox/releases/download/v1.19.1/nox_1.19.1_linux_arm64.tar.gz"
+      sha256 "ad8078a2268c136ae5e20c98edd16a87f3bc919c20df7c411df374e19631c2a7"
       define_method(:install) do
         bin.install "nox"
       end
